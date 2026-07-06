@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cream paper background */
+    --background: 38 40% 96%;
+    --foreground: 155 35% 10%;
+
+    --card: 38 50% 98%;
+    --card-foreground: 155 35% 10%;
+
+    --popover: 38 50% 98%;
+    --popover-foreground: 155 35% 10%;
+
+    /* Deep emerald — Pakistan green, refined */
+    --primary: 155 60% 18%;
+    --primary-foreground: 38 50% 97%;
+
+    /* Saffron / terracotta sunset */
+    --accent: 18 78% 55%;
+    --accent-foreground: 38 50% 97%;
+
+    /* Soft moss */
+    --secondary: 145 25% 90%;
+    --secondary-foreground: 155 60% 18%;
+
+    --muted: 38 25% 92%;
+    --muted-foreground: 155 15% 35%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 38 50% 97%;
+
+    --border: 38 25% 86%;
+    --input: 38 25% 86%;
+    --ring: 155 60% 18%;
+
+    --radius: 0.75rem;
+
+    /* Brand extras */
+    --gold: 38 75% 55%;
+    --emerald-deep: 158 70% 12%;
+    --emerald-glow: 152 55% 35%;
+    --terracotta: 14 70% 48%;
+    --cream: 38 60% 95%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(158 70% 12% / 0.1) 0%, hsl(158 70% 12% / 0.5) 60%, hsl(158 70% 12% / 0.85) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(18 78% 55%), hsl(38 75% 55%));
+    --gradient-emerald: linear-gradient(135deg, hsl(158 70% 12%), hsl(152 55% 25%));
+
+    --shadow-elegant: 0 20px 60px -20px hsl(158 70% 12% / 0.25);
+    --shadow-soft: 0 8px 30px -10px hsl(158 70% 12% / 0.15);
+
+    --transition-smooth: cubic-bezier(0.32, 0.72, 0.32, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-sunset { background: var(--gradient-sunset); }
+  .gradient-emerald { background: var(--gradient-emerald); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-cream { background-color: hsl(var(--cream)); }
+  .text-terracotta { color: hsl(var(--terracotta)); }
+
+  .animate-fade-up {
+    animation: fadeUp 0.9s var(--transition-smooth) both;
+  }
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-out both;
+  }
+  .animate-kenburns {
+    animation: kenburns 18s ease-out both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes kenburns {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.15); }
+  }
+}
