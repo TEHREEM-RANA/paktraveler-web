@@ -76,7 +76,7 @@ const Footer = () => {
           <div className="flex flex-col gap-1 sm:text-right">
             <p>Made for the love of Pakistan 🇵🇰</p>
             <p className="font-medium text-emerald-deep/80">
-              Developed by: Tehreem Rana, Ayesha Izzat, Wareesha Begum, Sanilah Ahmed
+              Developed by: Tehreem Rana
             </p>
           </div>
         </div>
