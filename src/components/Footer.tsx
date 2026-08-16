@@ -1,4 +1,4 @@
-import { Mountain, Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Mountain } from "lucide-react";
 
 const Footer = () => {
   const footerSections = [
@@ -25,26 +25,12 @@ const Footer = () => {
         { name: "Contact", href: "#" },
       ],
     },
-    {
-      title: "Resources",
-      links: [
-        { name: "Travel Tips", href: "#" },
-        { name: "Weather Updates", href: "#" },
-        { name: "Safety Info", href: "#" },
-        { name: "FAQs", href: "#" },
-      ],
-    },
-  ];
-
-  const developer = [
-    "Tehreem Rana",
-  
   ];
 
   return (
     <footer className="border-t border-emerald-deep/10 bg-cream text-muted-foreground">
       <div className="container px-4 py-12 md:py-16">
-        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-5">
+        <div className="grid gap-10 md:grid-cols-4">
           {/* Brand Info */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 text-emerald-deep">
@@ -57,35 +43,6 @@ const Footer = () => {
               A travel journal & trip planner for Pakistan. Built with love in
               Islamabad — for travelers, by travelers.
             </p>
-            
-            {/* Social Icons */}
-            <div className="mt-6 flex items-center gap-4 text-emerald-deep/80">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-terracotta transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-terracotta transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:contact@paktraveler.com"
-                className="hover:text-terracotta transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Dynamic Links Columns */}
@@ -117,11 +74,9 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} PakTraveler. All rights reserved.</p>
 
           <div className="flex flex-col gap-1 sm:text-right">
-            <p className="flex items-center gap-1 sm:justify-end">
-              Made for the love of Pakistan 🇵🇰
-            </p>
+            <p>Made for the love of Pakistan 🇵🇰</p>
             <p className="font-medium text-emerald-deep/80">
-              Developed by: {developers.join(", ")}
+              Developed by: Tehreem Rana, Ayesha Izzat, Wareesha Begum, Sanilah Ahmed
             </p>
           </div>
         </div>
